@@ -56,5 +56,5 @@ install:
 
 script:
   - mkdir build && cd build
-  - cmake -GNinja ..
+  - cmake -GNinja -DBUILD_CPR_TESTS=OFF ..
   - ninja
