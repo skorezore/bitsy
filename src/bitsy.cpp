@@ -1,9 +1,11 @@
-#include "bitsy/bitsy.hpp"
-
 #include <iostream>
+
+#include <cpr/cpr.h>
+
+#include "bitsy/bitsy.hpp"
 
 namespace bitsy {
     void f() {
-        std::cout << "whoa!" << std::endl;
+        std::cout << cpr::Get(cpr::Url{"http://ipinfo.io/ip"}).text << std::endl;
     }
 }
