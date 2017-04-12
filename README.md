@@ -6,7 +6,7 @@ A modern C++ interface for BTC-E's API.
 
 This project uses [CMake](https://cmake.org/), and as such, you're probably going to want to use CMake to link it.
 
-```
+```cmake
 add_subdirectory(path/to/bitsy)
 target_link_libraries(your_project bitsy)
 ```
