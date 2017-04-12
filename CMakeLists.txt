@@ -11,9 +11,14 @@ file(GLOB_RECURSE bitsy_source ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp ${CMAKE_CUR
 add_library(bitsy ${bitsy_source})
 target_include_directories(bitsy PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
+set(BuildTests FALSE CACHE BOOL "")
+set(BUILD_CPR_TESTS FALSE CACHE BOOL "")
+
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/deps/cpr)
 include_directories(${CPR_INCLUDE_DIRS})
 target_link_libraries(bitsy ${CPR_LIBRARIES})
+
+add_definitions(-DCURL_STATICLIB)
 
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/deps/json)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/deps/json/src)
