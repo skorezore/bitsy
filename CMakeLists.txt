@@ -13,6 +13,9 @@ target_include_directories(bitsy PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 set(BuildTests FALSE CACHE BOOL "")
 set(BUILD_CPR_TESTS FALSE CACHE BOOL "")
+set(BUILD_TESTING FALSE CACHE BOOL "")
+
+set(CURL_STATICLIB TRUE CACHE BOOL "")
 
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/deps/cpr)
 include_directories(${CPR_INCLUDE_DIRS})
